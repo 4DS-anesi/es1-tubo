@@ -61,13 +61,45 @@ public class Main {
                     System.out.println("Superfice: "+tubo.superfice());
                     break;
                 case 3:
+                    do{
+                        try {
+                            System.out.println("Inserire raggio tubo: ");
+                            input = new Scanner(System.in);
+                            r=input.nextFloat();
+                            flag=true;
+                        } catch (InputMismatchException e){
+                            System.out.println("\nErrore! Input non valido");
+                            flag=false;
+                        }
+                    } while (flag==false);
 
+                    try{
+                        tubo.setR(r);
+                    } catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 4:
+                    do{
+                        try {
+                            System.out.println("Inserire altezza tubo: ");
+                            input = new Scanner(System.in);
+                            h=input.nextFloat();
+                            flag=true;
+                        } catch (InputMismatchException e){
+                            System.out.println("\nErrore! Input non valido");
+                            flag=false;
+                        }
+                    } while (flag==false);
 
+                    try{
+                        tubo.setH(h);
+                    } catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 5:
-
+                    System.out.println(tubo.toString());
                     break;
                 case 0:
                     System.out.println("\nTerminazione programma");
