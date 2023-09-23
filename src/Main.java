@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        Tubo tubo;
+        Tubo tubo = null;
 
         int scelta=0;
         boolean flag=false;
@@ -52,10 +52,10 @@ public class Main {
             scelta=input.nextInt();
             switch (scelta){
                 case 1:
-
+                    System.out.println("Volume: "+tubo.volume());
                     break;
                 case 2:
-
+                    System.out.println("Superfice: "+tubo.superfice());
                     break;
                 case 3:
 
