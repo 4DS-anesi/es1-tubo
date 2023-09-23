@@ -15,6 +15,7 @@ public class Main {
             do{
                 try {
                     System.out.println("Inserire raggio tubo: ");
+                    input = new Scanner(System.in);
                     r=input.nextFloat();
                     flag=true;
                 } catch (InputMismatchException e){
@@ -26,6 +27,7 @@ public class Main {
             do{
                 try {
                     System.out.println("Inserire altezza tubo: ");
+                    input = new Scanner(System.in);
                     h=input.nextFloat();
                     flag=true;
                 } catch (InputMismatchException e){
@@ -49,6 +51,7 @@ public class Main {
         do{
             System.out.println("\nMenu TEST\n1. Calcolo volume\n2. Calcolo superfice\n3. Modifica il raggio\n4. Modifica l'altezza\n5. Visualizza dati tubo\n0. Esci");
             System.out.println("Scelta: ");
+            input = new Scanner(System.in);
             scelta=input.nextInt();
             switch (scelta){
                 case 1:
