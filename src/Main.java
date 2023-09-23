@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -8,19 +9,38 @@ public class Main {
 
         int scelta=0;
         boolean flag=false;
-        float r, h;
+        float r=0, h=0;
 
         do {
-            System.out.println("Inserire raggio tubo: ");
-            r=input.nextFloat();
-            System.out.println("Inserire altezza tubo: ");
-            h=input.nextFloat();
+            do{
+                try {
+                    System.out.println("Inserire raggio tubo: ");
+                    r=input.nextFloat();
+                    flag=true;
+                } catch (InputMismatchException e){
+                    System.out.println("\nErrore! Input non valido");
+                    flag=false;
+                }
+            } while (flag==true);
+
+            do{
+                try {
+                    System.out.println("Inserire altezza tubo: ");
+                    h=input.nextFloat();
+                    flag=true;
+                } catch (InputMismatchException e){
+                    System.out.println("\nErrore! Input non valido");
+                    flag=false;
+                }
+            } while (flag==true);
+
 
             try {
                 tubo = new Tubo(r, h);
                 flag=true;
             } catch (Exception e){
                 System.out.println(e.getMessage());
+                flag=false;
             }
         } while (flag==false);
 
