@@ -22,7 +22,7 @@ public class Main {
                     System.out.println("\nErrore! Input non valido");
                     flag=false;
                 }
-            } while (flag==true);
+            } while (flag==false);
 
             do{
                 try {
@@ -34,7 +34,7 @@ public class Main {
                     System.out.println("\nErrore! Input non valido");
                     flag=false;
                 }
-            } while (flag==true);
+            } while (flag==false);
 
 
             try {
