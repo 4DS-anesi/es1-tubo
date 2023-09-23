@@ -27,6 +27,10 @@ public class Tubo {
         return r;
     }
 
+    public float getH() {
+        return h;
+    }
+
     public float volume () {
         return (float) (Math.PI*Math.pow(r, 2)*h);
     }
