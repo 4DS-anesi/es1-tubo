@@ -30,4 +30,11 @@ public class Tubo {
     public float superfice () {
         return (float) ((2*Math.PI*r*h)+(2*Math.PI*Math.pow(r, 2)));
     }
+
+    @Override
+    public String toString() {
+        return "Tubo: " +
+                "r=" + r +
+                ", h=" + h;
+    }
 }
