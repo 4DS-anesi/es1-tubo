@@ -4,7 +4,7 @@ public class Tubo {
 
     public Tubo(float r, float h) throws Exception {
         setR(r);
-        this.h = h;
+        setH(h);
     }
 
     public void setR(float r) throws Exception {
@@ -12,6 +12,14 @@ public class Tubo {
             this.r=r;
         } else {
             throw new Exception("Errore! Raggio non valido");
+        }
+    }
+
+    public void setH(float h) throws Exception {
+        if (h > 0) {
+            this.h=h;
+        } else {
+            throw new Exception("Errore! Altezza non valida");
         }
     }
 
